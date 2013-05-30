@@ -17,7 +17,7 @@ Installation
 - run bin/buildout
 - start the proxy using ``sudo bin/siriproxy``
 
-This buildout uses as fork ``zopyx.pysiriproxy``::
+This buildout uses as fork ``zopyx.pysiriproxy``:
 
 - https://pypi.python.org/pypi/zopyx.pysiriproxy
 - https://github.com/zopyx/pysiriproxy
