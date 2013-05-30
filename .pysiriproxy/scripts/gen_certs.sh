@@ -68,7 +68,7 @@ emailAddress=""
 SIRI_PROXY_ROOT=$1
 
 # NOTE: This has been modified for use with pysiriproxy
-SIRI_PROXY_SETTINGS=~/.pysiriproxy/certificates
+SIRI_PROXY_SETTINGS=/root/.pysiriproxy/certificates
 
 LOG_FILE=$SIRI_PROXY_SETTINGS/cert.log
 TMP_DIR=/tmp

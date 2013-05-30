@@ -1,7 +1,7 @@
 
 Generating a 1024 bit RSA private key
-......++++++
-...........++++++
+..++++++
+..............................++++++
 writing new private key to '/tmp/siriCA/private/cakey.pem'
 -----
 You are about to be asked to enter information that will be incorporated
@@ -14,14 +14,15 @@ If you enter '.', the field will be left blank.
 Country Name (2 letter code) [AU]:State or Province Name (full name) [Some-State]:Locality Name (eg, city) []:Organization Name (eg, company) [Internet Widgits Pty Ltd]:Organizational Unit Name (eg, section) []:Common Name (eg, YOUR name) []:Email Address []:
 Please enter the following 'extra' attributes
 to be sent with your certificate request
-A challenge password []:An optional company name []:Using configuration from /Users/ajung/.pysiriproxy/scripts/openssl.cnf
+A challenge password []:An optional company name []:Using configuration from ./scripts/openssl.cnf
 Check that the request matches the signature
 Signature ok
 Certificate Details:
-        Serial Number: 11371892939738859292 (0x9dd11460b8e8471c)
+        Serial Number:
+            f4:83:af:e2:06:7a:4c:e5
         Validity
-            Not Before: May 29 14:38:50 2013 GMT
-            Not After : May 28 14:38:50 2016 GMT
+            Not Before: May 30 12:11:03 2013 GMT
+            Not After : May 29 12:11:03 2016 GMT
         Subject:
             countryName               = US
             stateOrProvinceName       = Missouri
@@ -29,18 +30,19 @@ Certificate Details:
             commonName                = SiriProxyCA
         X509v3 extensions:
             X509v3 Subject Key Identifier: 
-                1C:3B:A4:20:29:8B:44:0F:3C:8E:3C:DA:6B:F3:1B:0B:7E:45:9B:37
+                28:A8:05:BF:29:5F:DD:43:37:D6:8B:F6:58:E6:18:62:3F:FA:1C:66
             X509v3 Authority Key Identifier: 
-                keyid:1C:3B:A4:20:29:8B:44:0F:3C:8E:3C:DA:6B:F3:1B:0B:7E:45:9B:37
+                keyid:28:A8:05:BF:29:5F:DD:43:37:D6:8B:F6:58:E6:18:62:3F:FA:1C:66
 
             X509v3 Basic Constraints: 
                 CA:TRUE
-Certificate is to be certified until May 28 14:38:50 2016 GMT (1095 days)
-failed to update database
-TXT_DB error number 2
+Certificate is to be certified until May 29 12:11:03 2016 GMT (1095 days)
+
+Write out database with 1 new entries
+Data Base Updated
 Generating a 1024 bit RSA private key
-...++++++
-......++++++
+...................++++++
+..................++++++
 writing new private key to '/tmp/newkey.pem'
 -----
 You are about to be asked to enter information that will be incorporated
@@ -53,7 +55,34 @@ If you enter '.', the field will be left blank.
 Country Name (2 letter code) [AU]:State or Province Name (full name) [Some-State]:Locality Name (eg, city) []:Organization Name (eg, company) [Internet Widgits Pty Ltd]:Organizational Unit Name (eg, section) []:Common Name (eg, YOUR name) []:Email Address []:
 Please enter the following 'extra' attributes
 to be sent with your certificate request
-A challenge password []:An optional company name []:openssl ca -policy policy_anything -out /tmp/newcert.pem -config /Users/ajung/.pysiriproxy/scripts/openssl.cnf -passin pass:1234 -keyfile /tmp/siriCA/private/cakey.pem -cert /tmp/siriCA/cacert.pem -infiles /tmp/newreq.pem
-Using configuration from /Users/ajung/.pysiriproxy/scripts/openssl.cnf
-unable to load certificate
-140735188218332:error:0906D06C:PEM routines:PEM_read_bio:no start line:pem_lib.c:703:Expecting: TRUSTED CERTIFICATE
+A challenge password []:An optional company name []:openssl ca -policy policy_anything -out /tmp/newcert.pem -config ./scripts/openssl.cnf -passin pass:1234 -keyfile /tmp/siriCA/private/cakey.pem -cert /tmp/siriCA/cacert.pem -infiles /tmp/newreq.pem
+Using configuration from ./scripts/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number:
+            f4:83:af:e2:06:7a:4c:e6
+        Validity
+            Not Before: May 30 12:11:04 2013 GMT
+            Not After : May 30 12:11:04 2014 GMT
+        Subject:
+            countryName               = US
+            stateOrProvinceName       = Missouri
+            organizationName          = Siri Proxy
+            commonName                = *.apple.com
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                C1:C4:F6:8D:2F:43:20:E9:7F:4D:E1:57:D4:41:D0:04:02:0A:96:EF
+            X509v3 Authority Key Identifier: 
+                keyid:28:A8:05:BF:29:5F:DD:43:37:D6:8B:F6:58:E6:18:62:3F:FA:1C:66
+
+Certificate is to be certified until May 30 12:11:04 2014 GMT (365 days)
+Sign the certificate? [y/n]:
+
+1 out of 1 certificate requests certified, commit? [y/n]Write out database with 1 new entries
+Data Base Updated
+writing RSA key
