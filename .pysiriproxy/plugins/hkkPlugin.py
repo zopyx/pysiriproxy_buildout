@@ -127,6 +127,20 @@ class Plugin(BasePlugin):
         self.say("Willst Du den Radau wirklich hören?")
         self.completeRequest()
 
+    @matches("verstärker")
+    def AmplifierOnOff(self, text):
+        responses = ['ein', 'aus']
+        question = 'Soll ich den Verstärker ein- oder ausschalten?'
+        unknown = 'Wie bitte?'
+
+        response = yield ResponseList(responses, question, unknown)
+        if response == 'ein':
+            self.say("Verstärker eingeschaltet")
+            execute('verstärker ein')
+        elif response == 'aus':
+            self.say("Verstärker ausgeschaltet")
+            execute('verstärker aus')
+        self.completeRequest()
 
     @matches("radio")
     def confirmTest(self, text):
